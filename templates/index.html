@@ -1,0 +1,15 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Attendance System</title>
+</head>
+<body>
+    <h1>Student Attendance</h1>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.name }} - {{ "Present" if student.present else "Absent" }} - <a href="/toggle/{{ student.id }}">Toggle</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
